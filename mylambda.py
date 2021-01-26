@@ -1,0 +1,5 @@
+# Using Lambda function how print square of the number
+print("Enter the any number :")
+num = int(input())
+x = lambda a: a*a
+print(f"Square to given Number is {num} :",x(num))
