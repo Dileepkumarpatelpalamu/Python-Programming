@@ -1,0 +1,3 @@
+print("Entery any number")
+mynum = input()
+print(int(mynum,8))

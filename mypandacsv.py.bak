@@ -1,4 +1,9 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-df= pd.read_csv("C:\\Users\\Dileep-Pcs\\Desktop\\Python\\data.csv")
-print(df)
+import os
+#import pandas as pd
+#import matplotlib.pyplot as plt
+#df= pd.read_csv("C:\\Users\\Dileep-Pcs\\Desktop\\Python\\data.csv")
+#df.plot()
+#plt.show()
+#print(df)
+for item in dir(os.sys):
+	print(item)
