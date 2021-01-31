@@ -1,0 +1,14 @@
+Most Important git bass command for git Tutorial
+Sl No		Git Command				Description
+1		$ git init				This command is use to initialize the empy git reposetery
+2		$ git status				This command is use to status of git reposetery file or folder
+3		$ git add				This command is use to add file into git status tracking system
+4		$ git commit -m				This command is use to commit for all file in reposetery
+5		touch					This command is use to make empty file
+6		$ git branch				This command is use to show all branches of reposetery
+7		$ git checkout				Thsi command is use to switch the one to another branch
+8		$ git remote				This command is use to show remote address link or empty
+9		$git remote add origin ""		This command is use to make remote link as origin
+10		$git remote rm origin			This command is use to remove remote link as origin
+11		$git colone				This command is use to pull all git project from gitlab or github or gitbucket
+12		$git merge branchname			This command is use to merge the one to another branches
