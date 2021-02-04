@@ -1,0 +1,7 @@
+rows = int(input("Enter no fo rows :"))
+sum = 0
+for i in range(0,rows):
+	for j in range(0,i+1):
+		sum = i+j
+		print(sum,end=" ")
+	print()
