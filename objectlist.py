@@ -56,4 +56,3 @@ print()
 #     lst1.append(int(input("Enter elemen of list :")))
 # print(lst1)
 
-
