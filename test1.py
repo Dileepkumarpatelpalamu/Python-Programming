@@ -30,4 +30,4 @@ x = "Metier Career Solution"
 x = "Metier"
 while x:
     print(x)
-    x=x[1:]
+    x=x[1 :]
