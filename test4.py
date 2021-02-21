@@ -1,0 +1,158 @@
+# 1)write code to display following matrix in matrix format?
+#X=[[1,2,3],[4,5,6],[7,8,9]]
+#Solution:-
+#print([[X[i][j] for j in range(len(X))] for i in range(len(X))])
+# 2)write a program to find sum of the principal diagnol elements of the matrix?
+#Solution
+#X=[[1,2,3],[4,5,6],[7,8,9]]
+# add=0
+# for i in range(len(X)):
+#     for j in range(len(X)):
+#         if i == j:
+#             add = add + X[i][j]
+# print("Sum of the principal diagnol elements of the matrix :",add)
+# 3)
+#x=[10,20,30]
+#y=[10,20,30]
+# i)x is y:--False
+# ii)x==y:---True
+#Solution-
+#print(x is y)
+#print(x==y)
+# 4) 
+# a=[1,2,3,4,5]
+# b=a
+# a.append(6)
+# print(a)
+# print(b)
+# [1, 2, 3, 4, 5, 6]
+# [1, 2, 3, 4, 5, 6]
+#5 a=[10,20,30,40,50]
+# b=list(a)
+# a.append(6)
+# print(a)
+# print(b)
+# [10, 20, 30, 40, 50, 6]
+# [10, 20, 30, 40, 50]
+#6)
+# import copy
+# x=[1,2,3,[5,6]]
+# y=copy.copy(x)
+# x[0]=7
+# print(x)
+# print(y)
+# [7, 2, 3, [5, 6]]
+# [1, 2, 3, [5, 6]]
+# 7)
+# import copy
+# x=[1,2,3,[5,6]]
+# y=copy.deepcopy(x)
+# x[0]=100
+# print(x)
+# print(y)
+# [100, 2, 3, [5, 6]]
+# [1, 2, 3, [5, 6]]
+# 8)
+#l=[1,2,3,4,5,6]
+# print( l[::2])
+# [1, 3, 5]
+# print(l[::-1])
+# [6, 5, 4, 3, 2, 1]
+# print(l[-1:0:-1])
+# [6, 5, 4, 3, 2]
+# print(l[-1:1:-1])
+# [6, 5, 4, 3]
+# vals = [1, 2, 3, 4]
+# x=any(val *2> 12 for val in vals)
+# print(x)
+# False
+#10
+# a = [1, 1, 1, 2, 3, 4,2,3,3]
+# print(a.count(3))
+# 3
+#11 print([1, 10, 100] < [0, 10, 100])
+#False
+#12 print([1, 10] < [1, 10, 100])
+#True
+#13 sentence="i like python"
+# print(["".join(sorted(word,key = str.lower)) for word in sentence.split()])
+# ['i', 'eikl', 'hnopty']
+# 14) create a list of characters in apple, replacing non vowels with '*' using list      
+# 	comprehension
+# 	for example  Ex - 'apple' --> ['a', '*', '*', '*' ,'e']
+# print([ch if ch  in "aeiou" else "*" for ch in "apple"])
+# ['a', '*', '*', '*', 'e']
+#15 y=[x.sort() for x in [[2, 1], [4, 3], [0, 1]]]
+#print(y)
+#[None, None, None]
+# Write a program to bin to decimal no like 110 = 6
+# num = input("Enter any number : ")
+# decno= "0b"+num
+# print("Decimal no = ",int(decno,2))
+#---------------- or -----------
+# num = int(input("Enter binary num :"))
+# base=1
+# decvalue=0
+# while(num>0):
+#     r= num%10
+#     num=num//10
+#     decvalue += r*base
+#     base= base*2
+# print("Decimal value : ",decvalue)
+#Write a program to find strong number
+# n = int(input("Enter any number :"))
+# m=n
+# add=0
+# while(n>0):
+#     fact = 1
+#     r=n%10
+#     for i in range(1,r+1):
+#         fact = fact*i
+#     n=n//10
+#     add= add +fact
+# if m == add:
+#     print("Input No is strong number")
+# else:
+#     print("Input number is Not strong")
+# Write a program to print dynamic input 2 day array
+# mat=[]
+# rows=int(input("Enter no of rows : "))
+# cols = int(input("Enter no of cols : "))
+# for i in range(rows):
+#     a=[]
+#     for j in range(cols):
+#         x=int(input("Enter "+str(i+1)+" rows "+str(j+1)+" Element : "))
+#         a.append(x)
+#     mat.append(a)
+# print(mat)
+# print("Transpose of matrix")
+# print([[mat[j][i] for j in range(len(mat))] for i in range(len(mat))])
+#print([2* (x if x % 2 == 0 else -1) + 1 for x in range(10)])
+#print([x if x>2 else "*" for x in range(10) if x%2==0])
+#print([[x+y for x in [1,2,3]] for y in [3,4,5]])
+#print([x for x in range(10) if x%2==0])
+# Write a program to print decimal number
+# num = int(input("Enter binary Number :"))
+# sum = i = 0
+# base = 2
+# print(int(num))
+# while num!=0:
+#     r=num%10
+#     d = r*(base**i)
+#     sum = sum + d
+#     i+=1
+#     num=num//10
+# print("Decimal Value",sum)
+# num = int(input("Enter Decimal Number :"))
+# data =""
+# base = 10
+# while num!=0:
+#     r=num%2
+#     data= data+str(r)
+#     num=num//2
+# print("Binary number : "+data[::-1])
+
+
+
+
+
