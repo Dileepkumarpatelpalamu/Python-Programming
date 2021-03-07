@@ -1,0 +1,35 @@
+import csv
+def monthyearscalc():
+	yr=int(input("enter year :"))
+	months_days=[31,0,31,30,31,30,31,31,30,31,30,31]
+	if((yr%4==0 and yr%100!=0) or yr%400==0):
+		months_days[1]=29
+	else:
+		months_days[1]=28
+	day_wise_sums=[]
+	month=int(input("enter month number : "))
+	for i in range(1,months_days[month-1]+1):
+		day_wise_sums.append(0)
+	return day_wise_sums,yr,month,months_days
+def dailyreport(day_wise_sums,yr,month,months_days,data):
+	fo=None
+	try:
+		fo=open(data)
+		data=csv.reader(fo)
+		salesrecords=list(data)
+		for rec in salesrecords:
+			dt=rec[0].split("-")
+			if(int(dt[2])==yr and int(dt[1])==month):
+				day_wise_sums[int(dt[0])-1]=day_wise_sums[int(dt[0])-1]+float(rec[1])
+		months=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+		print(months[month-1]," sales report")
+		for i in range(0,months_days[month-1]):
+			print('Day : ',i+1," sales ",day_wise_sums[i])
+	except FileNotFoundError :
+		print("file Not found!!")
+	finally:
+		if fo:
+			fo.close()
+if __name__=='__main__':
+	day_wise_sums,yr,month,months_days=monthyearscalc()
+	dailyreport(day_wise_sums,yr,month,months_days,'C:/Users/Dileep-Pcs/OneDrive/Desktop/Python/sales.csv')

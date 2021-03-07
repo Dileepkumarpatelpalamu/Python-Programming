@@ -1,0 +1,129 @@
+import csv
+#write a function for read csv file data
+def readcsvdata(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        for rec in list(data):
+            for cols in range(len(rec)):
+                print(rec[cols],end='\t')
+            print()
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+# Write a program for sum all employee salary in  a csv file
+def calculatesumsalary(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        sum =0
+        for rec in list(data):
+            sum = sum + int(rec[2])
+        print("Total Employee's Salary :",sum)
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+# Write a program to calculate according to male and female employee salary
+def calculatesexsalary(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        sum1= 0
+        sum2 =0
+        for rec in list(data):
+            if rec[3] == 'F':
+                sum1= sum1 + int(rec[2])
+            else:
+                sum2= sum2 + int(rec[2])
+        print('Total Female Employee Salary :',sum1)
+        print('Total Male Employee Salary :',sum2)
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+# Write a program calculate max salary  in csv file
+def calculatemaxsalary(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        maxsalary = 0
+        for rec in list(data):
+            if maxsalary < int(rec[2]):
+                maxsalary = int(rec[2])
+                empname= rec[1]
+        print('Employee Name :',empname)
+        print('Max Salary :',maxsalary)
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+#Write a program to find minmum salary of employee name and salary
+def calculateminsalary(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        result=list(data)
+        minsalary = int(result[0][2])
+        for rec in result:
+            if minsalary > int(rec[2]):
+                minsalary = int(rec[2])
+                empname= rec[1]
+        print(empname,' minimum salary :',minsalary)
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+# Write a program to calculat average salary of emplyee in csv file
+def calculateavgsalary(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        totalsalary = 0
+        record = 0
+        for rec in list(data):
+            totalsalary = totalsalary + int(rec[2])
+            record +=1
+        print('Average Salary of employee : ',totalsalary/record)
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+#wirte a program to print employee name and salary greater than average salary
+def displayrecord(data):
+    fo = None
+    try:
+        fo=open(data)
+        data=csv.reader(fo)
+        totalsalary = 0
+        totalemp = 0
+        for rec in list(data):
+            totalsalary = totalsalary + int(rec[2])
+            totalemp +=1
+        avg = int(totalsalary/totalemp)
+        for record in list(data):
+            print(record)
+            if avg < int(record[2]):
+                print(record[1],'\t',record[2])
+            else:
+                print(hello)
+    except FileNotFoundError:
+        print("File not found!!!")
+    finally:
+        if fo:
+            fo.close()
+if __name__=='__main__':
+    displayrecord('emp.csv')
