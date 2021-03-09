@@ -27,7 +27,16 @@ def exportoutput(output):
 if __name__=='__main__':
     #num = int(input("Enter any number : "))
     #savepoint=findprime(num) 
-    #exportoutput(savepoint) 
+    #exportoutput(savepoint)
+    # Write a program to print unique words in paragraph 
+    paragraph="""i like python python like java so we can not uderstand java"""
+    unique=set()
+    data=''
+    for word in paragraph.split():
+        if word not in unique:
+            unique.add(word)
+            data = data +" "+ word
+    print(data)
     
     
     

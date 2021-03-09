@@ -31,7 +31,7 @@ def exportcsv(record):
     try:
         with open('file.csv','w',newline='') as fo:
             data = csv.writer(fo)
-            data.writerow(['Half 1','Half 2'])
+            data.writerow(['1 Half Yearly Report',' 2 Half Yearly Report'])
             data.writerow([round(record[0],2),round(record[1],2)])
             print('Report generated successfully.')
     except FileNotFoundError:
@@ -39,8 +39,11 @@ def exportcsv(record):
     finally:
         if fo :
             fo.close()
+
 # Here is start from main function on python
 if __name__=='__main__':
     salesrecord,year=opencsv('sales.csv')
     record = calculatehalfyearlyreport(salesrecord,year)
     exportcsv(record)
+    
+    

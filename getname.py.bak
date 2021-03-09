@@ -1,0 +1,3 @@
+def gename(name):
+	return name
+print(getname('Dileep Kumar Patel'))
