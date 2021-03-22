@@ -1,0 +1,12 @@
+import pymysql
+pymysql.install_as_MySQLdb()
+import MySQLdb
+db = MySQLdb.connect("localhost","root","DTGpalamu03#","student")
+print("db type is",type(db))
+cursor = db.cursor()
+cursor.execute("SELECT VERSION()")
+print("cursor type is",type(cursor))
+data = cursor.fetchone()
+print ("Database version : %s " % data)
+print("data type is",type(data))
+db.close()
