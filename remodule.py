@@ -41,7 +41,7 @@ Metacharacter in re modules.
 2 '^' (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline.
 3. '$' Matches the end of the string or just before the newline at the end of the string
 4. '*' match 0 or more repetitions of the preceding RE, as many repetitions as are possible. ab* will match ‘a’, 
-‘ab’, or ‘a’ followed by any number of ‘b’s.
+‘ab’ or ‘a’ followed by any number of ‘b’s.
 5. '+' match 1 or more repetitions of the preceding RE. ab+ will match ‘a’ followed by any non-zero number of 
 ‘b’s; it will not match just ‘a’.
 6. '?' match followed by zero or one character example [ab?] a followed by zero or one character of b
@@ -75,5 +75,16 @@ def test_patterns(text, patterns=[]):
         print ('%2d : %2d = "%s"' % (s, e-1, text[s:e]))
     return
 if __name__ == '__main__':
-    test_patterns(text,['ab*?'])
-
+    #test_patterns(text,['b+'])
+    mystr="Hello"
+    mydict={}
+    for ch in mystr:
+        data = re.search(ch+'+',mystr)
+        cnt= mystr.count(ch)
+        s=data.start()
+        e = data.end()
+        mydict[ch]=[s,e-1,cnt]
+    for key, val in mydict.items():
+        start=mydict[key][0]
+        end= mydict[key][1]
+        print(key,"Count:",mydict[key][2],"Index:",start,':',end)

@@ -114,13 +114,13 @@ def countwordtocsv(data):
     try:
         fo= open(data)
         mydata= csv.reader(fo)
-        res= list(mydata)
+        res=list(mydata)
         for sentence in res:
             for word in sentence:
                 words=word.split()
         print("Total words in csv file :",len(words))
     except FileNotFoundError:
-        print("Csv file can't be opened !")
+        print("csv file can't be opened !")
     finally:
         if fo:
             fo.close()
