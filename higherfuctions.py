@@ -36,9 +36,10 @@ There are following functions
 #     if fo:
 #         fo.close()
 
+
 test_str = "Hello"
 print("The original string is : " + test_str)
-res = {ele : [] for ele in test_str}  
+res = {key : [] for key in test_str}  
 for key, value in enumerate(test_str):
     res[value].append(key)
 for key, value in res.items():
